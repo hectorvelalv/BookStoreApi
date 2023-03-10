@@ -5,7 +5,6 @@ import com.bookStore.demo.models.entities.Book;
 import com.bookStore.demo.exceptions.BookIdNotFoundException;
 import com.bookStore.demo.mappers.BookMapper;
 import com.bookStore.demo.repositories.IBookRepository;
-import com.bookStore.demo.services.interfaces.IBookService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

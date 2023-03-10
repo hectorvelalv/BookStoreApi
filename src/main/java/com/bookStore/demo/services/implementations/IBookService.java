@@ -1,4 +1,4 @@
-package com.bookStore.demo.services.interfaces;
+package com.bookStore.demo.services.implementations;
 
 import com.bookStore.demo.models.dtos.BookDto;
 import com.bookStore.demo.models.entities.Book;
