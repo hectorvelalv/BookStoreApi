@@ -12,6 +12,6 @@ public interface IBookService {
     List<BookDto> getAllBooks();
     BookDto getBookById(Long id);
     void deleteProductById(Long id);
-    List<Book> getAllBooksOfAuthor(Long authorId);
+    List<BookDto> getAllBooksOfAuthor(String author);
     BookDto updateBook(Long bookId, Book updatedBook);
 }

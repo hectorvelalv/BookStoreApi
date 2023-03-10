@@ -7,6 +7,7 @@ import com.bookStore.demo.mappers.BookMapper;
 import com.bookStore.demo.repositories.IBookRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -20,14 +21,15 @@ public class BookServiceImpl implements IBookService {
 
     @Override
     public BookDto addBook(Book book) {
-//        return bookToBookDtoConverter.convert(bookRepository.save(book));
         return BookMapper.INSTANCE.bookToBookDto(bookRepository.save(book));
 
     }
 
     @Override
     public List<BookDto> getAllBooks() {
-        return bookRepository.findAll().stream().map(BookMapper.INSTANCE::bookToBookDto).toList();
+        List<BookDto> bookDtoList = new ArrayList<>();
+        bookRepository.findAll().forEach(book -> bookDtoList.add(BookMapper.INSTANCE.bookToBookDto(book)));
+        return  bookDtoList;
     }
 
     @Override
@@ -44,12 +46,11 @@ public class BookServiceImpl implements IBookService {
                 .ifPresent(
                         book -> bookRepository.deleteById(bookId)
                 );
-
     }
 
     @Override
-    public List<Book> getAllBooksOfAuthor(Long authorId) {
-        return null;
+    public List<BookDto> getAllBooksOfAuthor(String author) {
+        return bookRepository.findByAuthor(author).stream().map(BookMapper.INSTANCE::bookToBookDto).toList();
     }
 
     @Override

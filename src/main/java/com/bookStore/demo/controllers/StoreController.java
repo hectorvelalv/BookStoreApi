@@ -31,6 +31,11 @@ public class StoreController {
         return bookService.getAllBooks();
     }
 
+    @GetMapping("/getAllBooksOfAuthor/{author}")
+    public List<BookDto> getAllBooksOfAuthor(@PathVariable(value = "author") String author) {
+        return bookService.getAllBooksOfAuthor(author);
+    }
+
     @DeleteMapping("deleteBook/{id}")
     public void deleteBookById(@PathVariable(value = "id") final Long id){
         bookService.deleteProductById(id);
