@@ -10,9 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/bookStoreApi")
 public class StoreController {
-
     private final BookServiceImpl bookService;
-
     public StoreController(BookServiceImpl bookService) {
         this.bookService = bookService;
     }
@@ -21,7 +19,6 @@ public class StoreController {
     public BookDto addBook(@RequestBody Book book) {
         return bookService.addBook(book);
     }
-
     @GetMapping("/getBook/{id}")
     public BookDto getBookById(@PathVariable(value = "id") final Long id) {
         return bookService.getBookById(id);
@@ -30,17 +27,14 @@ public class StoreController {
     public List<BookDto> getAllBooks() {
         return bookService.getAllBooks();
     }
-
     @GetMapping("/getAllBooksOfAuthor/{author}")
     public List<BookDto> getAllBooksOfAuthor(@PathVariable(value = "author") String author) {
         return bookService.getAllBooksOfAuthor(author);
     }
-
     @DeleteMapping("deleteBook/{id}")
     public void deleteBookById(@PathVariable(value = "id") final Long id){
         bookService.deleteProductById(id);
     }
-
     @PutMapping("editBook/{id}")
     public BookDto editBook(@PathVariable(value = "id") final Long id, @RequestBody final Book editedBook){
         return bookService.updateBook(id, editedBook);

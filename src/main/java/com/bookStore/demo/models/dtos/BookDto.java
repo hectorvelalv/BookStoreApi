@@ -10,7 +10,6 @@ import lombok.NonNull;
 @Data
 @Builder
 public class BookDto {
-
     @NonNull
     private long id;
     @NotBlank
@@ -21,8 +20,4 @@ public class BookDto {
     private float price;
     @Min(1)
     private int available;
-
-
-
-
 }
