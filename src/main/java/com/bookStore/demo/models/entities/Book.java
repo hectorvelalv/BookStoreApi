@@ -1,4 +1,4 @@
-package com.bookStore.demo.entities;
+package com.bookStore.demo.models.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

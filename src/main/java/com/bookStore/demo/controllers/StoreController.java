@@ -1,7 +1,7 @@
 package com.bookStore.demo.controllers;
 
-import com.bookStore.demo.dto.BookDto;
-import com.bookStore.demo.entities.Book;
+import com.bookStore.demo.models.dtos.BookDto;
+import com.bookStore.demo.models.entities.Book;
 import com.bookStore.demo.services.implementations.BookServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

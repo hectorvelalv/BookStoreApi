@@ -1,14 +1,13 @@
 package com.bookStore.demo.services.implementations;
 
-import com.bookStore.demo.dto.BookDto;
-import com.bookStore.demo.entities.Book;
+import com.bookStore.demo.models.dtos.BookDto;
+import com.bookStore.demo.models.entities.Book;
 import com.bookStore.demo.exceptions.BookIdNotFoundException;
 import com.bookStore.demo.mappers.BookMapper;
 import com.bookStore.demo.repositories.IBookRepository;
 import com.bookStore.demo.services.interfaces.IBookService;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service

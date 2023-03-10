@@ -1,6 +1,6 @@
 package com.bookStore.demo.mappers;
-import com.bookStore.demo.dto.BookDto;
-import com.bookStore.demo.entities.Book;
+import com.bookStore.demo.models.dtos.BookDto;
+import com.bookStore.demo.models.entities.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
