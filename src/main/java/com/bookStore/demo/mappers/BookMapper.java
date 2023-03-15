@@ -10,8 +10,9 @@ public interface BookMapper {
 
     @Mapping(source = "id", target = "id")
     @Mapping(source = "title", target = "title")
-    @Mapping(source = "author", target = "author")
+    @Mapping(source = "authors", target = "authors")
     @Mapping(source = "price", target = "price")
     @Mapping(source = "available", target = "available")
+    @Mapping(source = "pages", target = "pages")
     BookDto bookToBookDto(Book book);
 }
